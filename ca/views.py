@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 
 def admin_login(request):
     if request.user.is_authenticated:
-        return redirect('/dashboard/')
+        return redirect('http://127.0.0.1:8000/old-admin/')
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -21,7 +21,7 @@ def admin_login(request):
 
         if user and user.is_superuser:
             login(request, user)
-            return redirect('/dashboard/')
+            return redirect('http://127.0.0.1:8000/old-admin/')
         else:
             messages.info(request, 'Invalid password or not a superuser')
 
