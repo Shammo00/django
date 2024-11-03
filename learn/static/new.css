@@ -1,0 +1,13 @@
+form p {
+    color: rgba(45, 19, 190, 0.541);
+}
+form button {
+    color: red;
+}
+img {
+    border: 200cm;
+    border-radius: 100%;
+    animation: backwards;
+    animation-duration: 20s;
+    animation-direction: alternate-reverse;
+}
