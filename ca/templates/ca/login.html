@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <eta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="static/login.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
-  <form action="" method="post">
-    {% csrf_token %}
-  <div id="logo"> 
-    <h1><i> WELCOME ADMIN</i></h1>
+  <div id="logo">
+    <h1><i>WELLCOME ADMIN</i></h1>
   </div> 
   <section class="stark-login">
     <form action="" method="post">	
+      {% csrf_token %}
       <div id="fade-box">
         <input type="text" name="username" id="username" placeholder="Username" required>
         <input type="password" name="password" id="password" placeholder="Password" required>
@@ -97,6 +95,5 @@
     <li></li>
     <li></li>
   </ul>
-  </form>
 </body>
 </html>
