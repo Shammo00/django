@@ -14,11 +14,10 @@
 			<strong>LEARNING LOG</strong>
 		</div>
 		<nav class="header-navigation">
-			<a href="http://127.0.0.1:8000/">Home</a>
+			<a href="{% url 'home' %}">Home</a>
 			<a href="#">About</a>
-			<a href="http://127.0.0.1:8000/topics/">Topic</a>
-			<a href="http://127.0.0.1:8000/admin/">Login/Signup</a>
-			<button>Menu</button>
+			<a href="{% url 'topics' %}">Topic</a>
+			<a href="{% url 'admin_login' %}">Login/Signup</a>
 		</nav>
 	</div>
 </header>

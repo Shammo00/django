@@ -22,17 +22,7 @@ body {
 	min-height: 300vh;
 	position: relative;
 }
-.header-navigation button {
-	cursor: pointer;
-  }
-  
-  .header-navigation nav {
-	display: none;
-  }
-  
-  .header-navigation button:focus + nav {
-	display: block;
-  }
+
 .responsive-wrapper {
 	width: 90%;
 	max-width: 1280px;
