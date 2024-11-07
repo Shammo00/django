@@ -5,8 +5,8 @@ from.models import Topic
 def home (request):
     return render(request,'learn/index.html')
 def topics (request):
-    topic = Topic.objects.order_by('name')
+    topic = Topic.objects.all()
     context = {
-        "topics": topic,
+        "topics": topic
     }
     return render(request,'learn/topic.html',context)

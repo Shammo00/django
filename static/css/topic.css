@@ -2,13 +2,14 @@ h1 {
     text-align: center;
     font-size: 2.5rem;  
     font-family: 'Cabin', sans-serif;
-    color: #00a4a2;
-    background: linear-gradient(to right, #00a4a2, #00fffc);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-color 0.2s;  
+    color: black
 }
+
 h1:hover {
-    background: linear-gradient(to right, #00fffc, #00a4a2);
+    animation: both 1s ease-in-out;
+    color: #00a4a2;
+    text-shadow: 0 0 20px #00fffc;
+    rotate: 180deg;
+    
 }
+
