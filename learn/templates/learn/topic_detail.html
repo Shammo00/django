@@ -1,0 +1,21 @@
+{%extends 'learn/base.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/topic_detail.css">
+</head>
+<body>
+  <h1>{{topic}}</h1>
+  {%for entry in entries%}
+  <ul   class="entry">
+    <li class="date">{{entry.date_added|date:"M d, Y H:i"}}</li>
+    <li class="text">{{entry.text|linebreaks}}</li>
+  </ul>
+  {%endfor%}
+  </body>
+</html>
+
+{% endblock %}

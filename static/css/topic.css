@@ -7,9 +7,7 @@ h1 {
 
 h1:hover {
     animation: both 1s ease-in-out;
-    color: #00a4a2;
     text-shadow: 0 0 20px #00fffc;
-    rotate: 180deg;
-    
+        
 }
 
