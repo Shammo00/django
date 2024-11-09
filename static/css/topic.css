@@ -1,13 +1,8 @@
-h1 {
-    text-align: center;
-    font-size: 2.5rem;  
-    font-family: 'Cabin', sans-serif;
-    color: black
+nav {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
 }
-
-h1:hover {
-    animation: both 1s ease-in-out;
-    text-shadow: 0 0 20px #00fffc;
-        
-}
-

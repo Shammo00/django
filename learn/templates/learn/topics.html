@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="/static/css/topic.css">
 </head>
 </html>
-<h1>
-    TOPIC
-</h1>
+<nav>
+    <h1 class="topic">Topics</h1>
+    <a href="{% url 'learn:new_topic' %}">New Topic</a>
+</nav>
 <ul class="topics">
     {% for topic in topics %}
     <li>
-        <a href="{% url 'topic' topic.id %}">{{topic}}</a>
+        <a href="{% url 'learn:topic' topic.id %}">{{topic}}</a>
     </li>
     {%empty %}
     <li>

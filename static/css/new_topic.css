@@ -1,0 +1,23 @@
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background-color: #f8f8f8
+}
+
+form div + div {
+    margin-top: 1em
+}
+.submit {
+    background-color: #00fffc;
+    color: #000;
+}
+.submit:click {
+    cursor: pointer;
+    background-color: #00ccff;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out
+    
+}

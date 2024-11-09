@@ -148,7 +148,7 @@ body {
 	font-weight: 700;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 300px) {
 	.header-navigation a {
 		display: inline-block;
 	}
