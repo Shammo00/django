@@ -15,3 +15,6 @@ class newEntryForm(forms.ModelForm):
         labels = {
             'text': 'New Entry'
         }
+        widgets = {
+            'text': forms.Textarea()
+        }
