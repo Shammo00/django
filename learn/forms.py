@@ -1,5 +1,5 @@
 from django import forms
-from .models import Topic
+from .models import Topic ,Entry
 
 class NewTopicForm(forms.ModelForm):
     class Meta:
@@ -7,4 +7,11 @@ class NewTopicForm(forms.ModelForm):
         fields = ['name']
         labels = {
             'name': 'New Topic'
+        }
+class newEntryForm(forms.ModelForm):
+    class Meta:
+        model = Entry
+        fields = ['text']
+        labels = {
+            'text': 'New Entry'
         }

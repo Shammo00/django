@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="/static/css/topic_detail.css">
 </head>
 <body>
-  <h1>{{topic}}</h1>
+  <nav>
+    <h1>{{topic}}</h1>
+    <a href="{% url 'learn:add_entry' topic.id %}">ADD ENTRY</a>
+  </nav>
   {%for entry in entries%}
   <ul   class="entry">
     <li class="date">{{entry.date_added|date:"M d, Y H:i"}}</li>
     <li class="text">{{entry.text|linebreaks}}</li>
   </ul>
   {%endfor%}
-  </body>
 </html>
 
 {% endblock %}
