@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from.models import Topic
+from.models import Topic , Entry 
 from .forms import NewTopicForm , newEntryForm
 
 
@@ -18,7 +18,7 @@ def topic (request,topic_id):
     entry = topic.entry_set.order_by('-date_added')
     context = {
         "topic":topic,
-        "entries":entry
+        "entries":entry,
     }
     return render(request,'learn/topic_detail.html',context)
 

@@ -12,12 +12,19 @@
     <h1>{{topic}}</h1>
     <a href="{% url 'learn:add_entry' topic.id %}">ADD ENTRY</a>
   </nav>
+  <div class="image1">
+    <img src="{{topic.image.url}}">
+  </div>
   {%for entry in entries%}
   <ul   class="entry">
     <li class="date">{{entry.date_added|date:"M d, Y H:i"}}</li>
     <li class="text">{{entry.text|linebreaks}}</li>
+    {%if entry.image%}
+    <div class="image2">
+      <img src="{{entry.image.url}}">
+    </div>
+    {%endif%}
   </ul>
   {%endfor%}
 </html>
-
 {% endblock %}
