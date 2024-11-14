@@ -9,10 +9,10 @@
 </head>
 <body>
     <h1>{{topic}}</h1>
-    <form action="{% url 'learn:add_entry' topic.id %}" method="post">
+    <form action="{% url 'learn:add_entry' topic.id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_div }}
-        <button type="submit">Add Entry</button>
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
     </form>
 </body>
 

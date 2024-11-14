@@ -24,7 +24,7 @@ def topic (request,topic_id):
 
 def new_topic(request):
     if request.method == 'POST':
-        form = NewTopicForm(data=request.POST)
+        form = NewTopicForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
             return redirect('learn:topics')
@@ -40,7 +40,7 @@ def add_entry(request,topic_id):
     if request.method != 'POST':
         form = newEntryForm()
     else:
-        form = newEntryForm(data=request.POST)
+        form = newEntryForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             new_entry = form.save(commit=False)
             new_entry.topic = topic

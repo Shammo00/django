@@ -9,6 +9,9 @@ class NewTopicForm(forms.ModelForm):
             'name': 'New Topic',
             'image': 'Attach Image',
         }
+        widgets = {
+            'image': forms.FileInput(attrs={'required': False}),
+        }
 class newEntryForm(forms.ModelForm):
     class Meta:
         model = Entry
@@ -18,5 +21,6 @@ class newEntryForm(forms.ModelForm):
             'image': 'Attach Image',
         }
         widgets = {
-            'text': forms.Textarea()
+            'text': forms.Textarea(),
+            'image': forms.FileInput(attrs={'required': False}),
         }

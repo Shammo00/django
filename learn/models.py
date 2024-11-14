@@ -11,7 +11,7 @@ class text (models.Model) :
     
 class Topic (models.Model) :
     name = models.CharField(max_length=200)
-    image = models.ImageField(default="django.png", blank=True)
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.name
@@ -20,7 +20,7 @@ class Entry (models.Model) :
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.CharField(max_length=1000)
     date_added = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(default="django.png", blank=True)
+    image = models.ImageField(blank=True)
 
     class Meta:
         verbose_name_plural = 'entries'

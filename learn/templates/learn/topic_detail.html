@@ -13,7 +13,9 @@
     <a href="{% url 'learn:add_entry' topic.id %}">ADD ENTRY</a>
   </nav>
   <div class="image1">
-    <img src="{{topic.image.url}}">
+    {%if topic.image%}
+      <img src="{{topic.image.url}}">
+    {%endif%}
   </div>
   {%for entry in entries%}
   <ul   class="entry">
